@@ -1,0 +1,43 @@
+information<-sc_node_not_relation;;
+science<-sc_node_not_relation;;
+devices<-sc_node_not_relation;;
+electromagnetic_energy<-sc_node_not_relation;;
+sphere_of_human_activity<-sc_node_not_relation;;
+
+radioelectronics<-sc_node_not_relation;
+=>nrel_main_idtf:
+[радиоэлектроника] (*<-lang_ru;;*);
+[radioelectronics] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(радиоэлектроника)](*<-lang_ru;;*);
+[Опр.(radioelectronics)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+science;
+devices;
+information;
+electromagnetic_energy
+};;
+<=nrel_sc_text_translation:...(*
+->[Радиоэлектроника — наука, включающая разработку и спользование устройств для работы с информацией при помощи электромагнитной энергии.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Radioelectronics - science that includes the development and use of devices for working with information using electromagnetic energy.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(радиоэлектроника)](*<-lang_ru;;*);
+[Утв.(radioelectronics)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+sphere_of_human_activity
+};;
+<=nrel_sc_text_translation:...(*
+->[Радиоэлектроника используется во всех сферах человеческой деятельности.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Radio electronics is used in all spheres of human activity.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;
+
+radioelectronics <= nrel_inclusion:science;;

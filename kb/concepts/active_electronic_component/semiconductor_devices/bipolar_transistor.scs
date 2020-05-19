@@ -1,0 +1,38 @@
+three_electrode_semiconductor_device<-sc_node_not_relation;;
+amplify_electrical_oscillation<-sc_node_not_relation;;
+generate_electrical_oscillation<-sc_node_not_relation;;
+
+bipolar_transistor<-sc_node_not_relation;
+=>nrel_main_idtf:
+[биполярный транзистор] (*<-lang_ru;;*);
+[bipolar transistor] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(биполярный транзистор)](*<-lang_ru;;*);
+[Опр.(bipolar transistor)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+three_electrode_semiconductor_device
+};;
+<=nrel_sc_text_translation:...(*
+->[Биполярный транзистор — трёхэлектродный полупроводниковый прибор, в структуре которого сформированы два p-n-перехода, перенос заряда через которые осуществляется носителями двух полярностей — электронами и дырками.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Bipolar transistor is a three-electrode semiconductor device, in the structure of which two p-n-transitions are formed, charge transfer through which is carried out by carriers of two polarities - electrons and holes.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(биполярный транзистор)](*<-lang_ru;;*);
+[Утв.(bipolar transistor)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+electronic_device;
+amplify_electrical_oscillation;
+generate_electrical_oscillation
+};;
+<=nrel_sc_text_translation:...(*
+->[Биполярный транзистор применяется в электронных устройствах для усиления или генерации электрических колебаний, а также в качестве коммутирующего элемента (например, в схемах ТТЛ).](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[The bipolar transistor is used in electronic devices to amplify or generate electrical oscillations, as well as a switching element (e.g. in TTL circuits).](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

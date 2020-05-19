@@ -1,0 +1,39 @@
+resistive_material<-sc_node_not_relation;;
+AC_circuit<-sc_node_not_relation;;
+triac<-sc_node_not_relation;;
+
+simistor<-sc_node_not_relation;
+=>nrel_main_idtf:
+[симистор] (*<-lang_ru;;*);
+[simistor] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(симистор)](*<-lang_ru;;*);
+[Опр.(simistor)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+semiconductor_device;
+thyristor;
+AC_circuit
+};;
+<=nrel_sc_text_translation:...(*
+->[Симистор  — полупроводниковый прибор, являющийся разновидностью тиристоров и используемый для коммутации в цепях переменного тока.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Simistor is a semiconductor device that is a form of thyristor and used for switching in AC circuits.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(симистор)](*<-lang_ru;;*);
+[Утв.(simistor)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+triac;
+another_name
+};;
+<=nrel_sc_text_translation:...(*
+->[Триак - другое название симистора.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Triac is another name for the simistor.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

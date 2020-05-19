@@ -1,0 +1,47 @@
+static_electromagnetic_device<-sc_node_not_relation;;
+inductively_connected_winding<-sc_node_not_relation;;
+magnetic_conductor<-sc_node_not_relation;;
+electromagnetic_induction<-sc_node_not_relation;;
+voltage<-sc_node_not_relation;;
+system_of_alternating_current<-sc_node_not_relation;;
+electric_converter<-sc_node_not_relation;;
+another_name<-sc_node_not_relation;;
+
+transformer<-sc_node_not_relation;
+=>nrel_main_idtf:
+[трансформатор] (*<-lang_ru;;*);
+[transformer] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(трансформатор)](*<-lang_ru;;*);
+[Опр.(transformer)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+static_electromagnetic_device;
+inductively_connected_winding;
+magnetic_conductor;
+electromagnetic_induction;
+voltage;
+system_of_alternating_current
+};;
+<=nrel_sc_text_translation:...(*
+->[Трансформатор — статическое электромагнитное устройство, имеющее две или более индуктивно связанные обмотки на каком-либо магнитопроводе и предназначенное для преобразования посредством электромагнитной индукции одной или нескольких систем (напряжений) переменного тока в одну или несколько других систем (напряжений), без изменения частоты.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[A transformer is a static electromagnetic device having two or more inductively coupled windings on a magnetic conductor and designed to convert by electromagnetic induction one or more AC systems (voltages) into one or more other systems (voltages) without changing frequency.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(электротрансформатор)](*<-lang_ru;;*);
+[Утв.(electric сonverter)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+electric_converter;
+another_name
+};;
+<=nrel_sc_text_translation:...(*
+->[Электротрансформатор - другое название трансформатора трансформа́тор.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[An electric converter is another name for a transformer.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

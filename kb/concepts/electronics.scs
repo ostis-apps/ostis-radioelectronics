@@ -1,0 +1,49 @@
+science<-sc_node_not_relation;;
+devices<-sc_node_not_relation;;
+physical_phenomena<-sc_node_not_relation;;
+charged_particles<-sc_node_not_relation;;
+concentration_change<-sc_node_not_relation;;
+movement<-sc_node_not_relation;;
+electronic_equipment<-sc_node_not_relation;;
+reduced_name<-sc_node_not_relation;;
+
+electronics<-sc_node_not_relation;
+=>nrel_main_idtf:
+[электроника] (*<-lang_ru;;*);
+[electronics] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(электроника)](*<-lang_ru;;*);
+[Опр.(electronics)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+science;
+devices;
+concentration_change;
+movement;
+charged_particles;
+physical_phenomena
+};;
+<=nrel_sc_text_translation:...(*
+->[Электроника — наука, занимающаяся созданием и использованием устройств, работа которых основана на изменении концентрации и перемещении заряженных частиц и других физических явлениях.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Electronics is a science dedicated to the creation and use of devices whose work is based on changing the concentration and movement of charged particles and other physical phenomena.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(радиодеталь)](*<-lang_ru;;*);
+[Утв.(radio_component)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+electronic_equipment;
+reduced_name
+};;
+<=nrel_sc_text_translation:...(*
+->[Электроника - сокращенное именование электронной аппаратуры.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Electronics - abbreviated naming of electronic equipment.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;
+
+electronics <= nrel_inclusion:radioelectronics;;

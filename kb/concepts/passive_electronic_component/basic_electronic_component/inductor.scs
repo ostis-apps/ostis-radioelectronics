@@ -1,0 +1,35 @@
+isolated_conductor<-sc_node_not_relation;;
+current<-sc_node_not_relation;;
+
+inductor<-sc_node_not_relation;
+=>nrel_main_idtf:
+[катушка индуктивности] (*<-lang_ru;;*);
+[inductor] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(катушка индуктивности)](*<-lang_ru;;*);
+[Опр.(inductor)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+isolated_conductor
+};;
+<=nrel_sc_text_translation:...(*
+->[Катушка индуктивности — это катушка смотанного в спираль или другую форму изолированного проводника.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[An inductor is a coil turned into a spiral or other form of insulated conductor.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(катушка индуктивности)](*<-lang_ru;;*);
+[Утв.(inductor)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+current
+};;
+<=nrel_sc_text_translation:...(*
+->[Ток в катушке индуктивности не может измениться мгновенно.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[The current in the inductor cannot change instantly.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

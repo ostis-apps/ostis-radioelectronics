@@ -1,0 +1,15 @@
+lib_component_proc_of_analogies_search
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа поиска аналогов]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of analogies_search]
+	(* <- lang_en;; *);
+
+<- platform_independent_reusable_component_OSTIS;
+<- reusable_scp_program;
+
+-> rrel_key_sc_element: 
+	proc_of_analogies_search
+;;
+
+lib_component_proc_of_building_incidency_graph = [*^"file://proc_of_analogies_search.scs"*];;

@@ -1,0 +1,41 @@
+semiconductor_device<-sc_node_not_relation;;
+conducting_channel<-sc_node_not_relation;;
+source<-sc_node_not_relation;;
+drain<-sc_node_not_relation;;
+gate<-sc_node_not_relation;;
+
+field_transistor<-sc_node_not_relation;
+=>nrel_main_idtf:
+[полевой транзистор] (*<-lang_ru;;*);
+[field transistor] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(полевой транзистор)](*<-lang_ru;;*);
+[Опр.(field transistor)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+semiconductor_device;
+conducting_channel
+};;
+<=nrel_sc_text_translation:...(*
+->[Полевой транзистор — полупроводниковый прибор, принцип действия которого основан на управлении электрическим сопротивлением токопроводящего канала поперечным электрическим полем, создаваемым приложенным к затвору напряжением.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Field transistor is a semiconductor device whose principle of operation is based on control of electric resistance of a current-conducting channel by a transverse electric field created by voltage applied to the gate.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(полевой транзистор)](*<-lang_ru;;*);
+[Утв.(field transistor)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+source;
+drain;
+gate
+};;
+<=nrel_sc_text_translation:...(*
+->[Область, из которой носители заряда уходят в канал, называется истоком, область, в которую они входят из канала, называется стоком, электрод, на который подается управляющее напряжение, называется затвором.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[The area from which the charge carriers leave the channel is called the source, the area into which they enter from the channel is called the drain, the electrode to which the control voltage is applied is called the gate.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

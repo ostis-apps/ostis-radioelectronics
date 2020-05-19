@@ -1,0 +1,121 @@
+scp_program -> proc_of_analogies_search
+	(*
+		-> rrel_params: ...
+			(*
+    			-> rrel_1: rrel_in: _element;;
+	   			-> rrel_2: rrel_out: _answer_node;;
+  			*);;
+	-> rrel_operators: ... (*
+
+        -> rrel_init: ..proc_init_element_storage (*
+			<- genEl;;
+			-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer_node;;
+
+			=> nrel_goto: ..proc_find_core_characteristic_set;;
+		*);;
+		
+		-> ..proc_find_core_characteristic_set (*
+			<- searchElStr5;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _element;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc0;;
+			-> rrel_3: rrel_assign: rrel_node: rrel_scp_var: _const_characteristic_set;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc1;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_main_characteristic;;	
+
+            => nrel_then: ..proc_find_core_element;;
+			=> nrel_else: ..proc_find_analogies_return;;				
+		*);;
+		
+		-> ..proc_find_core_element (*
+			<- searchElStr5;;
+			
+			-> rrel_1: rrel_assign: rrel_scp_var: _core_node;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _core_arc;;
+			-> rrel_3: rrel_fixed: rrel_node: rrel_scp_var: _element;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_radioelectronics_core_element_pointer;;	
+
+            => nrel_then: ..proc_erase_core_element_arc;;
+			=> nrel_else: ..proc_find_analogies_return;;				
+		*);;
+		
+		-> ..proc_erase_core_element_arc (*
+			<- eraseEl;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _core_arc;;
+			
+			=> nrel_goto: ..proc_find_all_potential_analogies;;		
+		*);;
+		
+		-> ..proc_find_all_potential_analogies (*
+			<- searchSetStr5;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _core_node;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc4;;
+			-> rrel_3: rrel_assign: rrel_node: rrel_scp_var: _temp_element;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc5;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_radioelectronics_core_element_pointer;;			
+			
+			-> rrel_set_3: rrel_assign: rrel_scp_var: _element_set;;
+
+			=> nrel_then: ..proc_check_element_characteristics;;
+			=> nrel_else: ..proc_fix_broken_connectors;;
+		*);;
+		
+		-> ..proc_check_element_characteristics (*
+			<-searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _element_set;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc6;;
+			-> rrel_3: rrel_assign: rrel_vertex: rrel_scp_var: _current_element;;
+			
+			=> nrel_then: ..proc_erase_visited_element;;
+			=> nrel_else: ..proc_fix_broken_connectors;;					
+		*);;
+
+		-> ..proc_erase_visited_element (*
+			<- eraseEl;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc6;;
+			
+			=> nrel_goto: ..proc_find_temp_characteristics;;		
+		*);;
+		
+		-> ..proc_find_temp_characteristics (*
+			<- searchElStr5;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _current_element;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc7;;
+			-> rrel_3: rrel_fixed: rrel_node: rrel_scp_var: _const_characteristic_set;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc8;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_main_characteristic;;	
+
+			=> nrel_then: ..proc_add_to_answer_node;;
+			=> nrel_else: ..proc_check_element_characteristics;;
+		*);;
+		
+		-> ..proc_add_to_answer_node (*
+			<- genElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_node;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc9;;
+			-> rrel_3: rrel_fixed: rrel_scp_var: _current_element;;
+
+			=> nrel_goto: ..proc_check_element_characteristics;;
+		*);;
+
+                -> ..proc_fix_broken_connectors
+			(*
+				<- genElStr5;;
+
+				-> rrel_1: rrel_fixed: rrel_scp_var: _core_node;;
+				-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc10;;
+				-> rrel_3: rrel_fixed: rrel_scp_var: _element;;
+				-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc11;;
+				-> rrel_5: rrel_fixed: rrel_scp_const: rrel_radioelectronics_core_element_pointer;;
+
+				=>nrel_goto: ..proc_find_analogies_return;;
+			*);;	
+
+		-> ..proc_find_analogies_return (*
+			<- return;;
+		*);;	
+	*);;
+*);;

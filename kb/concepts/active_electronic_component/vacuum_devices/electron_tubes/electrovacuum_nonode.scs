@@ -1,0 +1,38 @@
+resistive_material<-sc_node_not_relation;;
+
+electrovacuum_nonode<-sc_node_not_relation;
+=>nrel_main_idtf:
+[электровакуумный нонод] (*<-lang_ru;;*);
+[electrovacuum nonode] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(электровакуумный нонод)](*<-lang_ru;;*);
+[Опр.(electrovacuum nonode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+vacuum_electronic_lamp;
+electrode
+};;
+<=nrel_sc_text_translation:...(*
+->[Электровакуумный нонод  — электронная лампа с девятью электродами.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Electrovacuum nonode is an electronic lamp with nine electrodes.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(электровакуумный нонод)](*<-lang_ru;;*);
+[Утв.(electrovacuum nonode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+thermoelectronic_cathode;
+control_grid;
+shielding_grid;
+anode
+};;
+<=nrel_sc_text_translation:...(*
+->[Электровакуумный нонод  состоит из катода, анода и семью сеток.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Electrovacuum nonode consists of cathode, anode and seven grids.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

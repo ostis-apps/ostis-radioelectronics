@@ -1,0 +1,37 @@
+vacuum_electronic_lamp<-sc_node_not_relation;;
+compact_lamp<-sc_node_not_relation;;
+electrode_system<-sc_node_not_relation;;
+
+combined_vacuum_lamp<-sc_node_not_relation;
+=>nrel_main_idtf:
+[комбинированная лампа ] (*<-lang_ru;;*);
+[combined lamp] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(комбинированная лампа )](*<-lang_ru;;*);
+[Опр.(combined lamp)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+vacuum_electronic_lamp
+};;
+<=nrel_sc_text_translation:...(*
+->[Комбинированная лампа — электронная лампа, в которой сочетаются две, и более ламп в одном баллоне.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[A combined lamp is an electronic lamp that combines two or more lamps in a single cylinder.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(комбинированная лампа )](*<-lang_ru;;*);
+[Утв.(combined lamp)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+compact_lamp;
+electrode_system
+};;
+<=nrel_sc_text_translation:...(*
+->[Лампы, содержащие в одном баллоне три и более системы электродов, называются компактронами.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Lamps containing three or more electrode systems in one cylinder are called compact lamps.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

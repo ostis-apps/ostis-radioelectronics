@@ -1,0 +1,35 @@
+cathode<-sc_node_not_relation;;
+electrode<-sc_node_not_relation;;
+electrovacuum_diode<-sc_node_not_relation;
+=>nrel_main_idtf:
+[электровакуумный диод] (*<-lang_ru;;*);
+[electrovacuum diode] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(электровакуумный диод)](*<-lang_ru;;*);
+[Опр.(electrovacuum diode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+electronic_lamp;
+electrode
+};;
+<=nrel_sc_text_translation:...(*
+->[Электровакуумный диод — вакуумная двухэлектродная электронная лампа.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[An electrovacuum diode is a vacuum two-electrode electronic lamp.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(электровакуумный диод)](*<-lang_ru;;*);
+[Утв.(electrovacuum diode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+cathode
+};;
+<=nrel_sc_text_translation:...(*
+->[В процессе работы катод электровакуумного диода нагревается до температур, при которых возникает термоэлектронная эмиссия.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[During operation, the cathode of the electrovacuum diode is heated to temperatures at which thermoelectronic emission occurs.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

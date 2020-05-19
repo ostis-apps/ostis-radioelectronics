@@ -1,0 +1,52 @@
+characteristic <- sc_node_not_relation;;
+electronic_component <- sc_node_not_relation;;
+
+standart_characteristic_set
+  <- sc_node_not_relation;
+  <- characteristic;
+
+  => nrel_main_idtf:
+    [стандартный_набор_характеристик] (* <- lang_ru;; *);
+    [standart_characteristic_set] (* <- lang_en;; *);
+  => nrel_idtf:
+    [набор характеристик] (* <- lang_ru;; *);
+    [набор характеристик] (* <- lang_ru;; *);
+
+  <- rrel_key_sc_element: ... (*
+    <- definition;;
+    => nrel_main_idtf:
+      [Опр. (стандартный_набор_характеристик)] (* <- lang_ru;; *);
+      [Def. (standart_characteristic_set)] (* <- lang_en;; *);;
+    <= nrel_using_constants: ... (*
+      -> characteristic;;
+      -> electronic_component;;
+    *);;
+    <= nrel_sc_text_translation: ... (*
+      -> [Набор характеристик некоего эелемента] (* <- lang_ru;; => nrel_format: format_html;; *);;
+      -> [Set of characteristics of electronic component] (* <- lang_en;; => nrel_format: format_html;; *);;
+    *);;
+  *);
+
+  <- rrel_key_sc_element: ... (*
+    <- explanation;;
+    => nrel_main_idtf:
+      [Утв. (стандартный_набор_характеристик)] (* <- lang_ru;; *);
+      [Exp. (standart_characteristic_set)] (* <- lang_en;; *);;
+    <= nrel_using_constants: ... (*
+      -> characteristic;;
+    *);;
+    <= nrel_sc_text_translation: ... (*
+      -> [Набор характеристик в радиоэлектронике конечен, что дает возможность описать их все] (* <- lang_ru;; => nrel_format: format_html;; *);;
+      -> [Radioelectronics has limited amount of characteristic sets. So we can write them all] (* <- lang_en;; => nrel_format: format_html;; *);;
+    *);;
+  *);;
+
+
+
+
+
+
+
+
+
+

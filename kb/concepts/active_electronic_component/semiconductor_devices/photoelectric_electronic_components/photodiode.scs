@@ -1,0 +1,40 @@
+receiver_of_optical_radiation<-sc_node_not_relation;;
+photosensitive_region<-sc_node_not_relation;;
+photovoltaic_effect<-sc_node_not_relation;;
+solar_cell<-sc_node_not_relation;;
+
+photodiode<-sc_node_not_relation;
+=>nrel_main_idtf:
+[фотодиод] (*<-lang_ru;;*);
+[photodiode] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(фотодиод)](*<-lang_ru;;*);
+[Опр.(photodiode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+semiconductor_device;
+receiver_of_optical_radiation;
+photosensitive_region
+};;
+<=nrel_sc_text_translation:...(*
+->[Фотодиод — приёмник оптического излучения, который преобразует попавший на его фоточувствительную область свет в электрический заряд за счёт процессов в p-n-переходе.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[A photodiode is a receiver of optical radiation that converts light caught on its photosensitive region into an electric charge by processes in the p-n transition.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(фотодиод)](*<-lang_ru;;*);
+[Утв.(photodiode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+photovoltaic_effect;
+solar_cell
+};;
+<=nrel_sc_text_translation:...(*
+->[Фотодиод, работа которого основана на фотовольтаическом эффекте, называется солнечным элементом.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[A photodiode whose work is based on photovoltaic effect is called a solar cell.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

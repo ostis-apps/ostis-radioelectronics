@@ -1,0 +1,35 @@
+resistive_material<-sc_node_not_relation;;
+another_name<-sc_node_not_relation;;
+
+zener_diode<-sc_node_not_relation;
+=>nrel_main_idtf:
+[cтабилитрон] (*<-lang_ru;;*);
+[zener diode] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(cтабилитрон)](*<-lang_ru;;*);
+[Опр.(zener diode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+diode
+};;
+<=nrel_sc_text_translation:...(*
+->[Стабилитрон — полупроводниковый диод, работающий при обратном смещении в режиме пробоя.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[A zener diode is a semiconductor diode that operates at reverse displacement in breakdown mode.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(cтабилитрон)](*<-lang_ru;;*);
+[Утв.(zener diode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+another_name
+};;
+<=nrel_sc_text_translation:...(*
+->[Другое название стабилитрона - диод Зенера.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Another name for the zener diode is the Zener diode.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

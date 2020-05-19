@@ -1,0 +1,35 @@
+characteristic <- sc_node_not_relation;;
+electronic_component <- sc_node_not_relation;;
+
+arity <- sc_node_norole_relation;;
+number <- sc_node_norole_relation;;
+number->2;;
+arity->...  (*
+<-sc_node_not_relation;;
+<=nrel_mesaurement:2;;
+->maximum_permissible_characteristic;;
+*);;
+
+maximum_permissible_characteristic
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [предельно_допустимая_характеристика] (* <- lang_ru;; *);
+    [maximum_permissible_characteristic] (* <- lang_en;; *);
+
+  <- rrel_key_sc_element: ... (*
+    <- definition;;
+    => nrel_main_idtf:
+      [Опр. (предельно_допустимая_характеристика)] (* <- lang_ru;; *);
+      [Def. (maximum_permissible_characteristic)] (* <- lang_en;; *);;
+
+    <= nrel_using_constants: ... (*
+      -> characteristic;;
+      -> electronic_component;;
+    *);;
+
+    <= nrel_sc_text_translation: ... (*
+      -> [Характеристика, которая описывает пределы работоспособности элемента.] (* <- lang_ru;; => nrel_format: format_html;; *);;
+      -> [A characteristic that describes the limits of the workability of an element.](* <- lang_en;; => nrel_format: format_html;; *);;
+    *);;
+  *);;

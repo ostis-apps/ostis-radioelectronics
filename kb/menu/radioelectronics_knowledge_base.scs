@@ -1,0 +1,15 @@
+radioelectronics_knowledge_base
+=> nrel_main_idtf:
+	[База знаний радиоэлектроники]
+	(* <- lang_ru;; *);
+=> nrel_main_idtf:
+	[Radioelectronics knowledge base]
+	(* <- lang_en;; *);
+
+<- not_enough_formed_structure;
+<- sc_model_of_knowledge_base;
+
+<= nrel_section_decomposition:section_radioelectronics;
+<= nrel_section_decomposition:section_electronics;
+<= nrel_section_decomposition:section_electronic_component;
+<= nrel_section_decomposition:section_circuitry;;

@@ -1,0 +1,35 @@
+characteristic <- sc_node_not_relation;;
+electronic_component <- sc_node_not_relation;;
+
+arity <- sc_node_norole_relation;;
+number <- sc_node_norole_relation;;
+number->2;;
+arity->...  (*
+<-sc_node_not_relation;;
+<=nrel_mesaurement:2;;
+->nrel_capacity;;
+*);;
+
+nrel_capacity
+  <- sc_node_norole_relation;
+  <- maximum_permissible_characteristic;
+  => nrel_main_idtf:
+    [емкость] (* <- lang_ru;; *);
+    [capacity] (* <- lang_en;; *);
+
+  <- rrel_key_sc_element: ... (*
+    <- definition;;
+    => nrel_main_idtf:
+      [Опр. (емкость)] (* <- lang_ru;; *);
+      [Def. (capacity)] (* <- lang_en;; *);;
+
+    <= nrel_using_constants: ... (*
+      -> characteristic;;
+      -> electronic_component;;
+    *);;
+
+    <= nrel_sc_text_translation: ... (*
+      -> [характеристика проводника, показывающая способность проводника накапливать электрический заряд.] (* <- lang_ru;; => nrel_format: format_html;; *);;
+      -> [the characteristic of a conductor showing the ability of a conductor to accumulate an electric charge.](* <- lang_en;; => nrel_format: format_html;; *);;
+    *);;
+  *);;

@@ -1,0 +1,35 @@
+characteristic <- sc_node_not_relation;;
+electronic_component <- sc_node_not_relation;;
+
+arity <- sc_node_norole_relation;;
+number <- sc_node_norole_relation;;
+number->2;;
+arity->...  (*
+<-sc_node_not_relation;;
+<=nrel_mesaurement:2;;
+->nrel_energy_density;;
+*);;
+
+nrel_energy_density
+  <- sc_node_norole_relation;
+  <- static_characteristic;
+  => nrel_main_idtf:
+    [плотность_энергии] (* <- lang_ru;; *);
+    [energy_density] (* <- lang_en;; *);
+
+  <- rrel_key_sc_element: ... (*
+    <- definition;;
+    => nrel_main_idtf:
+      [Опр. (плотность_энергии)] (* <- lang_ru;; *);
+      [Def. (energy_density)] (* <- lang_en;; *);;
+
+    <= nrel_using_constants: ... (*
+      -> characteristic;;
+      -> electronic_component;;
+    *);;
+
+    <= nrel_sc_text_translation: ... (*
+      -> [поток энергии через малую площадку единичной площади,] (* <- lang_ru;; => nrel_format: format_html;; *);;
+      -> [the flow of energy through a small area of a unit area,](* <- lang_en;; => nrel_format: format_html;; *);;
+    *);;
+  *);;

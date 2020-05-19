@@ -1,0 +1,44 @@
+electronic_instrument<-sc_node_not_relation;;
+light_emitter<-sc_node_not_relation;;
+photodetector<-sc_node_not_relation;;
+optical_channel<-sc_node_not_relation;;
+common_housing<-sc_node_not_relation;;
+optopar<-sc_node_not_relation;;
+
+optron<-sc_node_not_relation;
+=>nrel_main_idtf:
+[оптрон] (*<-lang_ru;;*);
+[optron] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(оптрон)](*<-lang_ru;;*);
+[Опр.(optron)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+electronic_instrument;
+light_emitter;
+photodetector;
+optical_channel;
+common_housing
+};;
+<=nrel_sc_text_translation:...(*
+->[Оптрон — электронный прибор, состоящий из излучателя света и фотоприёмника , связанных оптическим каналом и, как правило, объединённых в общем корпусе.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Optron is an electronic instrument consisting of a light emitter and a photodetector, connected by an optical channel and usually combined in a common housing.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(оптрон)](*<-lang_ru;;*);
+[Утв.(optron)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+optopar;
+another_name
+};;
+<=nrel_sc_text_translation:...(*
+->[Оптопара - другое название оптрона.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Optopar is another name for optron.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

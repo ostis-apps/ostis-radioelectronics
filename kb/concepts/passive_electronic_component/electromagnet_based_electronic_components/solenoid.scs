@@ -1,0 +1,40 @@
+isolated_conductor<-sc_node_not_relation;;
+cylindrical_framework<-sc_node_not_relation;;
+multilayered_solenoid<-sc_node_not_relation;;
+singlelayer_solenoid<-sc_node_not_relation;;
+
+solenoid<-sc_node_not_relation;
+=>nrel_main_idtf:
+[соленоид] (*<-lang_ru;;*);
+[solenoid] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(соленоид)](*<-lang_ru;;*);
+[Опр.(solenoid)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+cylindrical_framework;
+isolated_conductor;
+inductor
+};;
+<=nrel_sc_text_translation:...(*
+->[Соленоид — это катушка индуктивности, наматываемая изолированным проводником на цилиндрический каркас.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[A solenoid is an inductor wound by an insulated conductor onto a cylindrical framework.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(соленоид)](*<-lang_ru;;*);
+[Утв.(solenoid)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+multilayered_solenoid;
+singlelayer_solenoid
+};;
+<=nrel_sc_text_translation:...(*
+->[Соленоиды могут быть однослойными и многослойными.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Resistor consists of resistive material.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

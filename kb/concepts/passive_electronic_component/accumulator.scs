@@ -1,0 +1,35 @@
+chemical_current_source<-sc_node_not_relation;;
+lithium_ion_accumulator<-sc_node_not_relation;;
+
+accumulator<-sc_node_not_relation;
+=>nrel_main_idtf:
+[электрический аккумулятор] (*<-lang_ru;;*);
+[accumulator] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(электрический аккумулятор)](*<-lang_ru;;*);
+[Опр.(accumulator)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+chemical_current_source
+};;
+<=nrel_sc_text_translation:...(*
+->[Электрический аккумулятор — химический источник тока, источник ЭДС многоразового действия, основная специфика которого заключается в обратимости внутренних химических процессов, что обеспечивает его многократное циклическое использование (через заряд-разряд) для накопления энергии и автономного электропитания различных электротехнических устройств и оборудования, а также для обеспечения резервных источников энергии в медицине, производстве, транспорте и в других сферах.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[The electric accumulator is a chemical current source, a multiple-action EMF source, the main specificity of which is the reversibility of internal chemical processes, which ensures its multiple cyclic use (through charge-discharge) for energy accumulation and autonomous power supply of various electrical devices and equipment, as well as for provision of backup energy sources in medicine, production, transport and other spheres.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(электрический аккумулятор)](*<-lang_ru;;*);
+[Утв.(accumulator)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+lithium_ion_accumulator
+};;
+<=nrel_sc_text_translation:...(*
+->[В основном используются литий-ионные аккумуляторы.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Lithium-ion accumulators are mainly used.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

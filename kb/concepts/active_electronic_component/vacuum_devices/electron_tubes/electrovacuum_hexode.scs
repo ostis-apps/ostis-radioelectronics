@@ -1,0 +1,36 @@
+electrovacuum_hexode<-sc_node_not_relation;
+=>nrel_main_idtf:
+[электровакуумный гексод] (*<-lang_ru;;*);
+[electrovacuum hexode] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(электровакуумный гексод)](*<-lang_ru;;*);
+[Опр.(electrovacuum hexode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+vacuum_electronic_lamp;
+electrode
+};;
+<=nrel_sc_text_translation:...(*
+->[Электровакуумный гексод — электронная лампа с шестью электродами.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Electric vacuum hexode is an electronic lamp with six electrodes.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(электровакуумный гексод)](*<-lang_ru;;*);
+[Утв.(electrovacuum hexode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+thermoelectronic_cathode;
+control_grid;
+shielding_grid;
+anode
+};;
+<=nrel_sc_text_translation:...(*
+->[Электровакуумный гексод состоит из катода, анода и четырёх сеток.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Electric vacuum hexode consists of cathode, anode and four grids.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

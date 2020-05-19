@@ -1,0 +1,41 @@
+devices<-sc_node_not_relation;;
+charge<-sc_node_not_relation;;
+energy_of_electric_field<-sc_node_not_relation;;
+alphabetic_system_of_marking<-sc_node_not_relation;;
+digital_system_of_marking<-sc_node_not_relation;;
+
+capacitor<-sc_node_not_relation;
+=>nrel_main_idtf:
+[конденсатор] (*<-lang_ru;;*);
+[capacitor] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(конденсатор)](*<-lang_ru;;*);
+[Опр.(capacitor)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+devices;
+charge;
+energy_of_electric_field
+};;
+<=nrel_sc_text_translation:...(*
+->[Конденсатор — устройство для накопления заряда и энергии электрического поля.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Capacitor - device for accumulation of charge and energy of electric field.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(системы маркировки конденсаторов)](*<-lang_ru;;*);
+[Утв.(systems of marking of condensers)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+alphabetic_system_of_marking;
+digital_system_of_marking
+};;
+<=nrel_sc_text_translation:...(*
+->[Существуют буквенная и цифровая системы маркировки конденсаторов.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[There are letter and digital capacitor marking systems.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

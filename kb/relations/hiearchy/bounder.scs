@@ -1,0 +1,4 @@
+characteristic_of_a_electronic_component => nrel_inclusion: mechanical_characteristic;
+                                                                    => nrel_inclusion: static_characteristic;
+                                                                    => nrel_inclusion: maximum_permissible_characteristic;
+                                                                    => nrel_inclusion: dynamic_performance_characteristic;;

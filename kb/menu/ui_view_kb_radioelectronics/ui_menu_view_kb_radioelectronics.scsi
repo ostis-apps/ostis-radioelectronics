@@ -1,0 +1,8 @@
+ui_menu_view_kb_radioelectronics <- ui_user_command_class_noatom;;
+ui_menu_view_kb_radioelectronics => nrel_main_idtf: [Команды для радиоэлектроники] (* <- lang_ru;; *);;
+ui_menu_view_kb_radioelectronics => nrel_main_idtf: [Command to radioelectronics] (* <- lang_en;; *);;
+ui_menu_view_kb_radioelectronics <= nrel_ui_commands_decomposition:
+{
+	ui_menu_file_for_analogies_search;
+	ui_menu_file_for_element_validation
+};;

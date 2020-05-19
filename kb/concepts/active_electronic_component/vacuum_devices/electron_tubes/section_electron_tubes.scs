@@ -1,0 +1,18 @@
+section_electron_tubes<-non_atomic_section;
+=>nrel_main_idtf:
+[Раздел. Электронные лампы] (*<-lang_ru;;*);
+[Section. Electron tubes] (*<-lang_en;;*);;
+
+section_electron_tubes-> rrel_key_sc_element:
+combined_vacuum_lamp;
+electrovacuum_diode;
+electrovacuum_triode;
+electrovacuum_tetrode;
+electrovacuum_pentode;
+electrovacuum_hexode;
+electrovacuum_heptode;
+electrovacuum_octode;
+electrovacuum_nonode;;
+
+section_electron_tubes<-not_enough_formed_structure;;
+

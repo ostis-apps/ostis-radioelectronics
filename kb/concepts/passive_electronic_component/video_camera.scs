@@ -1,0 +1,36 @@
+television_transmitting_camera<-sc_node_not_relation;;
+video_recording_device<-sc_node_not_relation;;
+
+video_camera<-sc_node_not_relation;
+=>nrel_main_idtf:
+[видеокамера] (*<-lang_ru;;*);
+[video camera] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(видеокамера)](*<-lang_ru;;*);
+[Опр.(video camera)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+television_transmitting_camera;
+video_recording_device
+};;
+<=nrel_sc_text_translation:...(*
+->[Видеокамера — комбинация телевизионной передающей камеры и устройства для видеозаписи.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[A video camera is a combination of a television transmitting camera and a video recording device.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(видеокамера)](*<-lang_ru;;*);
+[Утв.(video camera)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+television_transmitting_camera
+};;
+<=nrel_sc_text_translation:...(*
+->[На данный момент слово «видеокамера» практически вытеснило слова «телевизионная камера» и «телекамера» (ТВ-камера), заменив их.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[At the moment, the word "video camera" practically displaced the words "television camera" and "TV camera", replacing them.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

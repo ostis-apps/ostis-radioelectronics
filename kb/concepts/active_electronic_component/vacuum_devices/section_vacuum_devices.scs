@@ -1,0 +1,11 @@
+section_vacuum_devices<-non_atomic_section;
+=>nrel_main_idtf:
+[Раздел. Вакуумные приборы] (*<-lang_ru;;*);
+[Section. Vacuum devices] (*<-lang_en;;*);;
+
+section_vacuum_devices<= nrel_section_decomposition:{
+section_electron_tubes
+};;
+
+section_vacuum_devices<-not_enough_formed_structure;;
+

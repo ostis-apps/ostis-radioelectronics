@@ -1,0 +1,35 @@
+characteristic <- sc_node_not_relation;;
+electronic_component <- sc_node_not_relation;;
+
+arity <- sc_node_norole_relation;;
+number <- sc_node_norole_relation;;
+number->2;;
+arity->...  (*
+<-sc_node_not_relation;;
+<=nrel_mesaurement:2;;
+-> dynamic_performance_characteristic;;
+*);;
+
+dynamic_performance_characteristic
+  <- sc_node_not_relation;
+
+  => nrel_main_idtf:
+    [динамические_характеристики] (* <- lang_ru;; *);
+    [dynamic_performance_characteristic] (* <- lang_en;; *);
+
+  <- rrel_key_sc_element: ... (*
+    <- definition;;
+    => nrel_main_idtf:
+      [Опр. (динамические_характеристики)] (* <- lang_ru;; *);
+      [Def. (dynamic_performance_characteristic)] (* <- lang_en;; *);;
+
+    <= nrel_using_constants: ... (*
+      -> characteristic;;
+      -> electronic_component;;
+    *);;
+
+    <= nrel_sc_text_translation: ... (*
+      -> [Характеристики описывающие поведение элемента при .] (* <- lang_ru;; => nrel_format: format_html;; *);;
+      -> [Non electrical characteristic of an element.](* <- lang_en;; => nrel_format: format_html;; *);;
+    *);;
+  *);;

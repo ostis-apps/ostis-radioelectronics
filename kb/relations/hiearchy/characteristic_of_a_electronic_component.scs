@@ -1,0 +1,43 @@
+characteristic <- sc_node_not_relation;;
+electronic_component <- sc_node_not_relation;;
+
+characteristic_of_a_electronic_component
+  <- sc_node_not_relation;
+  <- characteristic;
+
+  => nrel_main_idtf:
+    [характеристика радиоэлектронного компонента] (* <- lang_ru;; *);
+    [characteristic_of_a_electronic_component] (* <- lang_en;; *);
+  => nrel_idtf:
+    [характеристика радиоэлектронного компонента] (* <- lang_ru;; *);
+    [characteristic_of_a_electronic_component] (* <- lang_ru;; *);
+
+  <- rrel_key_sc_element: ... (*
+    <- definition;;
+    => nrel_main_idtf:
+      [Опр. (характеристика радиоэлектронного компонента)] (* <- lang_ru;; *);
+      [Def. (characteristic_of_a_electronic_component)] (* <- lang_en;; *);;
+    <= nrel_using_constants: ... (*
+      -> characteristic;;
+      -> electronic_component;;
+    *);;
+    <= nrel_sc_text_translation: ... (*
+      -> [То, что определяет свойства радиоэлемента] (* <- lang_ru;; => nrel_format: format_html;; *);;
+      -> [What determines the properties of a radio element] (* <- lang_en;; => nrel_format: format_html;; *);;
+    *);;
+  *);
+
+  <- rrel_key_sc_element: ... (*
+    <- explanation;;
+    => nrel_main_idtf:
+      [Утв. (характеристика радиоэлектронного компонента)] (* <- lang_ru;; *);
+      [Exp. (characteristic_of_a_electronic_component)] (* <- lang_en;; *);;
+    <= nrel_using_constants: ... (*
+      -> characteristic;;
+      -> electronic_component;;
+    *);;
+    <= nrel_sc_text_translation: ... (*
+      -> [Для разных радиоэлементов характеристика могут отличаться приоритетом] (* <- lang_ru;; => nrel_format: format_html;; *);;
+      -> [For different radio elements, the characteristic may differ in priority] (* <- lang_en;; => nrel_format: format_html;; *);;
+    *);;
+  *);;

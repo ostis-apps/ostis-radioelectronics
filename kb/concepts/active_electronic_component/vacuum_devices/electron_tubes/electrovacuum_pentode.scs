@@ -1,0 +1,37 @@
+dinatron_effect<-sc_node_not_relation;;
+shielding_mesh<-sc_node_not_relation;;
+
+electrovacuum_pentode<-sc_node_not_relation;
+=>nrel_main_idtf:
+[электровакуумный пентод] (*<-lang_ru;;*);
+[electrovacuum pentode] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(электровакуумный пентод)](*<-lang_ru;;*);
+[Опр.(electrovacuum pentode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+vacuum_electronic_lamp;
+dinatron_effect;
+shielding_mesh
+};;
+<=nrel_sc_text_translation:...(*
+->[Электровакуумный пентод — вакуумная электронная лампа с экранирующей сеткой, в которой между экранирующей сеткой и анодом размещена третья (защитная или антидинатронная) сетка, подавляющая динатронный эффект.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[An electrovacuum pentode is a vacuum electron lamp with a shielding mesh in which a third (protective or antidinatron) mesh is placed between the shielding mesh and the anode, suppressing the dinatron effect.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(электровакуумный пентод)](*<-lang_ru;;*);
+[Утв.(electrovacuum pentode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+electrovacuum_triode
+};;
+<=nrel_sc_text_translation:...(*
+->[Недостатки пентодов — более высокие, чем у триода, нелинейные искажения, в которых преобладают нечетные гармоники, острая зависимость коэффициента усиления от сопротивления нагрузки, бо́льший уровень собственных шумов.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Disadvantages of pentodes - higher than that of triode, nonlinear distortions, in which odd harmonics prevail, acute dependence of amplification coefficient on load resistance, greater level of natural noise.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;
