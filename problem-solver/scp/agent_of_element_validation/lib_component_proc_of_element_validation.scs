@@ -1,0 +1,15 @@
+lib_component_proc_of_element_validation
+=> nrel_main_idtf:
+	[Компонент библиотеки. scp-программа валидации элементов]
+	(* <- lang_ru;; *);
+	[Library component. scp-program of element validation]
+	(* <- lang_en;; *);
+
+<- platform_independent_reusable_component_OSTIS;
+<- reusable_scp_program;
+
+-> rrel_key_sc_element: 
+	proc_of_element_validation
+;;
+
+lib_component_proc_of_building_incidency_graph = [*^"file://proc_of_element_validation.scs"*];;

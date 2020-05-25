@@ -1,0 +1,45 @@
+resistive_material<-sc_node_not_relation;;
+photocell<-sc_node_not_relation;;
+solar_energy<-sc_node_not_relation;;
+solar_collector<-sc_node_not_relation;;
+carrier_material<-sc_node_not_relation;;
+solar_power_engineering<-sc_node_not_relation;;
+object_of_research<-sc_node_not_relation;;
+
+solar_battery<-sc_node_not_relation;
+=>nrel_main_idtf:
+[солнечная батарея] (*<-lang_ru;;*);
+[solar battery] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(солнечная батарея)](*<-lang_ru;;*);
+[Опр.(solar battery)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+photocell;
+semiconductor_device;
+solar_energy;
+solar_collector;
+carrier_material
+};;
+<=nrel_sc_text_translation:...(*
+->[Солнечная батарея — объединение фотоэлектрических преобразователей (фотоэлементов) — полупроводниковых устройств, прямо преобразующих солнечную энергию в постоянный электрический ток, в отличие от солнечных коллекторов, производящих нагрев материала-теплоносителя.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Solar battery is a combination of photoelectric converters (photocells) - semiconductor devices that directly convert solar energy to direct electric current, as opposed to solar collectors that heat carrier material.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(солнечная батарея)](*<-lang_ru;;*);
+[Утв.(solar battery)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+solar_power_engineering;
+object_of_research
+};;
+<=nrel_sc_text_translation:...(*
+->[Солнечная батарея — являются объектом исследования гелиоэнергетики.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Solar battery - are the object of research of solar power engineering.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

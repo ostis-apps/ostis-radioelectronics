@@ -1,0 +1,11 @@
+section_circuitry<-non_atomic_section;
+=>nrel_main_idtf:
+[Раздел. Схемотехника] (*<-lang_ru;;*);
+[Section. Circuitry] (*<-lang_en;;*);;
+
+section_circuitry<= nrel_section_decomposition:{
+section_electronic_components
+};;
+section_circuitry-> rrel_key_sc_element:circuitry;;
+
+section_circuitry<-not_enough_formed_structure;;

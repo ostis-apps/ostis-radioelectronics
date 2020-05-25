@@ -1,0 +1,35 @@
+characteristic <- sc_node_not_relation;;
+electronic_component <- sc_node_not_relation;;
+
+arity <- sc_node_norole_relation;;
+number <- sc_node_norole_relation;;
+number->2;;
+arity->...  (*
+<-sc_node_not_relation;;
+<=nrel_mesaurement:2;;
+->nrel_loss_resistance;;
+*);;
+
+nrel_loss_resistance
+  <- sc_node_norole_relation;
+  <- dynamic_performance_characteristic;
+  => nrel_main_idtf:
+    [сопротивление_потерь] (* <- lang_ru;; *);
+    [loss_resistance] (* <- lang_en;; *);
+
+  <- rrel_key_sc_element: ... (*
+    <- definition;;
+    => nrel_main_idtf:
+      [Опр. (сопротивление_потерь)] (* <- lang_ru;; *);
+      [Def. (loss_resistance)] (* <- lang_en;; *);;
+
+    <= nrel_using_constants: ... (*
+      -> characteristic;;
+      -> electronic_component;;
+    *);;
+
+    <= nrel_sc_text_translation: ... (*
+      -> [Сопротивление, возникающее при протекании тока] (* <- lang_ru;; => nrel_format: format_html;; *);;
+      -> [Resistance that appears when element is enabled](* <- lang_en;; => nrel_format: format_html;; *);;
+    *);;
+  *);;

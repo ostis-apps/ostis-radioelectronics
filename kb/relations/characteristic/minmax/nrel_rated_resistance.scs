@@ -1,0 +1,51 @@
+characteristic <- sc_node_not_relation;;
+electronic_component <- sc_node_not_relation;;
+rrel_expected_value <- sc_node_role_relation;;
+
+arity <- sc_node_norole_relation;;
+number <- sc_node_norole_relation;;
+number->2;;
+arity->...  (*
+<-sc_node_not_relation;;
+<=nrel_mesaurement:2;;
+->nrel_rated_resistance;;
+*);;
+
+nrel_rated_resistance
+  <- sc_node_norole_relation;
+  <- maximum_permissible_characteristic;
+  => nrel_main_idtf:
+    [номинальное_сопротивление] (* <- lang_ru;; *);
+    [rated_resistance] (* <- lang_en;; *);
+
+
+  <- rrel_key_sc_element: ... (*
+    <- explanation;;
+    => nrel_main_idtf:
+      [Утв. (Номинальное_сопротивление)] (* <- lang_ru;; *);
+      [Exp. (Rated_resistance] (* <- lang_en;; *);;
+    <= nrel_using_constants: ... (*
+      -> rrel_expected_value;;
+    *);;
+    <= nrel_sc_text_translation: ... (*
+      -> [Номинальное и реальное сопротивления могут быть различны по значению](*<-lang_ru;;=>nrel_format:format_html;;*);;
+      -> [Rated resistance and real resistance can be a little bit different values](*<-lang_en;;=>nrel_format:format_html;;*);;
+    *);;
+  *);
+
+  <- rrel_key_sc_element: ... (*
+    <- definition;;
+    => nrel_main_idtf:
+      [Опр. (Номинальное_сопротивление)] (* <- lang_ru;; *);
+      [Def. (Rated_resistance)] (* <- lang_en;; *);;
+
+    <= nrel_using_constants: ... (*
+      -> characteristic;;
+      -> electronic_component;;
+    *);;
+
+    <= nrel_sc_text_translation: ... (*
+      -> [Ожидаемое сопротивление элемента] (* <- lang_ru;; => nrel_format: format_html;; *);;
+      -> [Expected element resistance](* <- lang_en;; => nrel_format: format_html;; *);;
+    *);;
+  *);;

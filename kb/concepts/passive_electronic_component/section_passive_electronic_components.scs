@@ -1,0 +1,24 @@
+section_passive_electronic_components<-non_atomic_section;
+=>nrel_main_idtf:
+[Раздел. Пассивные электронные компоненты] (*<-lang_ru;;*);
+[Section. Passive electronic components] (*<-lang_en;;*);;
+
+section_passive_electronic_components<= nrel_section_decomposition:{
+section_basic_electronic_components;
+section_electromagnet_based_electronic_components;
+section_electromagnetic_induction_based_electronic_components;
+section_piezoelectric_electronic_components
+};;
+
+section_passive_electronic_components-> rrel_key_sc_element:
+lag_line;
+switch;
+electronic_indicator;
+electrodynamic_loudspeaker;
+microphone;
+video_camera;
+antenna;
+inductor;
+accumulator;;
+
+section_passive_electronic_components<-not_enough_formed_structure;;

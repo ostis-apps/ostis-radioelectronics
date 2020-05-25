@@ -1,0 +1,36 @@
+resistive_material<-sc_node_not_relation;;
+radiation_by_light<-sc_node_not_relation;;
+p_n_transition<-sc_node_not_relation;;
+photoresistor<-sc_node_not_relation;
+=>nrel_main_idtf:
+[фоторезистор] (*<-lang_ru;;*);
+[photoresistor] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(фоторезистор)](*<-lang_ru;;*);
+[Опр.(photoresistor)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+semiconductor_device;
+radiation_by_light
+};;
+<=nrel_sc_text_translation:...(*
+->[Фоторезистор — полупроводниковый прибор, изменяющий величину своего сопротивления при облучении светом.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[A photoresistor is a semiconductor device that changes the value of its resistance when irradiated with light.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(фоторезистор)](*<-lang_ru;;*);
+[Утв.(photoresistor)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+p_n_transition
+};;
+<=nrel_sc_text_translation:...(*
+->[Фоторезистор не имеет p-n перехода, поэтому обладает одинаковой проводимостью независимо от направления протекания тока.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[The photoresistor does not have a p-n transition, so it has the same conductivity regardless of the direction of current flow.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

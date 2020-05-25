@@ -1,0 +1,21 @@
+section_semiconductor_devices<-non_atomic_section;
+=>nrel_main_idtf:
+[Раздел. Полупроводниковые приборы] (*<-lang_ru;;*);
+[Section. Semiconductor devices] (*<-lang_en;;*);;
+
+section_semiconductor_devices<= nrel_section_decomposition:{
+section_photoelectric_electronic_components;
+section_integrated_circuits
+};;
+
+section_semiconductor_devices-> rrel_key_sc_element:
+diode;
+simistor;
+thyristor;
+bipolar_transistor;
+field_transistor;
+integrated_circuit;
+zener_diode;;
+
+section_semiconductor_devices<-not_enough_formed_structure;;
+

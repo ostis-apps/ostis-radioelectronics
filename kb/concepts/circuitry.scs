@@ -1,0 +1,45 @@
+science<-sc_node_not_relation;;
+devices_of_different_function<-sc_node_not_relation;;
+synthesis<-sc_node_not_relation;;
+analysis<-sc_node_not_relation;;
+electronic_circuit<-sc_node_not_relation;;
+specification<-sc_node_not_relation;;
+
+circuitry<-sc_node_not_relation;
+=>nrel_main_idtf:
+[cхемотехника] (*<-lang_ru;;*);
+[circuitry] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(радиоэлектроника)](*<-lang_ru;;*);
+[Опр.(circuitry)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+science;
+devices_of_different_function;
+synthesis;
+analysis;
+electronic_circuit
+};;
+<=nrel_sc_text_translation:...(*
+->[Схемотехника — наука, занимающаяся синтезом и анализом электронных схем и устройств различного назначения.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Circuitry is a science engaged in synthesis and analysis of electronic circuits and devices of various purposes.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(cхемотехника)](*<-lang_ru;;*);
+[Утв.(circuitry)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+specification
+};;
+<=nrel_sc_text_translation:...(*
+->[Схемотехника начинается с разработки технического задания.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Circuitry begins with the development of a technical assignment.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;
+
+circuitry <= nrel_inclusion:electronics;;

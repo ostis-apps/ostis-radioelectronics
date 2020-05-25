@@ -1,0 +1,43 @@
+resistive_material<-sc_node_not_relation;;
+chip<-sc_node_not_relation;;
+microelectronic_device<-sc_node_not_relation;;
+semiconductor_substrate<-sc_node_not_relation;;
+nondemountable_case<-sc_node_not_relation;;
+microsurface<-sc_node_not_relation;;
+
+integrated_circuit<-sc_node_not_relation;
+=>nrel_main_idtf:
+[интегральная схема] (*<-lang_ru;;*);
+[integrated circuit] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(интегральная схема)](*<-lang_ru;;*);
+[Опр.(integrated circuit)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+microelectronic_device;
+semiconductor_substrate;
+nondemountable_case;
+microsurface
+};;
+<=nrel_sc_text_translation:...(*
+->[Интегральная схема — микроэлектронное устройство — электронная схема произвольной сложности (кристалл), изготовленная на полупроводниковой подложке (пластине или плёнке) и помещённая в неразборный корпус или без такового в случае вхождения в состав микросборки.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[An integrated circuit - a microelectronic device - an electronic circuit of arbitrary complexity (crystal), made on a semiconductor substrate (plate or film) and placed in or without a non-exploded housing in case of inclusion in a microsurface.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(интегральная схема)](*<-lang_ru;;*);
+[Утв.(integrated circuit)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+chip;
+another_name
+};;
+<=nrel_sc_text_translation:...(*
+->[Микросхема - другое название интегральной схемы.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[The chip is another name for the integrated circuit.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

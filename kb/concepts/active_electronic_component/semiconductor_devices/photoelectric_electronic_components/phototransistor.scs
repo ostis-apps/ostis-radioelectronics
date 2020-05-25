@@ -1,0 +1,41 @@
+optoelectronic_semiconductor_device<-sc_node_not_relation;;
+external_optical_irradiation<-sc_node_not_relation;;
+semiconductor_base_layer<-sc_node_not_relation;;
+instrument<-sc_node_not_relation;;
+
+phototransistor<-sc_node_not_relation;
+=>nrel_main_idtf:
+[фототранзистор] (*<-lang_ru;;*);
+[phototransistor] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(фототранзистор)](*<-lang_ru;;*);
+[Опр.(phototransistor)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+bipolar_transistor;
+optoelectronic_semiconductor_device
+};;
+<=nrel_sc_text_translation:...(*
+->[Фототранзистор — оптоэлектронный полупроводниковый прибор, вариант биполярного транзистора. ](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Phototransistor is an optoelectronic semiconductor device, a variant of a bipolar transistor.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(фототранзистор)](*<-lang_ru;;*);
+[Утв.(phototransistor)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+bipolar_transistor;
+external_optical_irradiation;
+semiconductor_base_layer;
+instrument
+};;
+<=nrel_sc_text_translation:...(*
+->[Фототранзистор отличается от обычного биполярного транзистора тем, что полупроводниковый базовый слой прибора доступен для воздействия внешнего оптического облучения, за счёт этого ток через прибор зависит от интенсивности этого облучения.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[The phototransistor differs from a conventional bipolar transistor in that the semiconductor base layer of the instrument is available for exposure to external optical irradiation, whereby the current through the instrument depends on the intensity of this irradiation.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

@@ -1,0 +1,35 @@
+characteristic <- sc_node_not_relation;;
+electronic_component <- sc_node_not_relation;;
+
+arity <- sc_node_norole_relation;;
+number <- sc_node_norole_relation;;
+number->2;;
+arity->...  (*
+<-sc_node_not_relation;;
+<=nrel_mesaurement:2;;
+->nrel_spurious_inductance;;
+*);;
+
+nrel_spurious_inductance
+  <- sc_node_norole_relation;
+  <- dynamic_performance_characteristic;
+  => nrel_main_idtf:
+    [паразитная_индуктивность] (* <- lang_ru;; *);
+    [spurious_inductance] (* <- lang_en;; *);
+
+  <- rrel_key_sc_element: ... (*
+    <- definition;;
+    => nrel_main_idtf:
+      [Опр. (паразитная_индуктивность)] (* <- lang_ru;; *);
+      [Def. (spurious_inductance)] (* <- lang_en;; *);;
+
+    <= nrel_using_constants: ... (*
+      -> characteristic;;
+      -> electronic_component;;
+    *);;
+
+    <= nrel_sc_text_translation: ... (*
+      -> [Индуктивность возникающая при протекании тока по элементу] (* <- lang_ru;; => nrel_format: format_html;; *);;
+      -> [Inductance that appears when element is enabled](* <- lang_en;; => nrel_format: format_html;; *);;
+    *);;
+  *);;

@@ -1,0 +1,35 @@
+resistive_material<-sc_node_not_relation;;
+antenna_form<-sc_node_not_relation;;
+
+antenna<-sc_node_not_relation;
+=>nrel_main_idtf:
+[антенна] (*<-lang_ru;;*);
+[antenna] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(антенна)](*<-lang_ru;;*);
+[Опр.(antenna)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+device
+};;
+<=nrel_sc_text_translation:...(*
+->[Антенна — устройство, предназначенное для излучения или приёма радиоволн.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[An antenna is a device designed to emit or receive radio waves.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(антенна)](*<-lang_ru;;*);
+[Утв.(antenna)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+antenna_form
+};;
+<=nrel_sc_text_translation:...(*
+->[Форма антенны зависит от параметров принимаемой радиоволны. ](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[The shape of the antenna depends on the parameters of the received radio wave.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

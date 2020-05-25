@@ -1,0 +1,38 @@
+resistive_material<-sc_node_not_relation;;
+thermoelectronic_cathode<-sc_node_not_relation;;
+control_grid<-sc_node_not_relation;;
+anode<-sc_node_not_relation;;
+electrovacuum_triode<-sc_node_not_relation;
+=>nrel_main_idtf:
+[электровакуумный триод] (*<-lang_ru;;*);
+[electrovacuum triode] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(электровакуумный триод)](*<-lang_ru;;*);
+[Опр.(electrovacuum triode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+vacuum_electronic_lamp
+};;
+<=nrel_sc_text_translation:...(*
+->[Электровакуумный триод — электронная лампа, позволяющая входным сигналом управлять током в электрической цепи.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[An electrovacuum triode is an electronic lamp that allows the input signal to control the current in the electrical circuit.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(электровакуумный триод)](*<-lang_ru;;*);
+[Утв.(electrovacuum triode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+thermoelectronic_cathode;
+control_grid;
+anode
+};;
+<=nrel_sc_text_translation:...(*
+->[Электровакуумный триод имеет три электрода: термоэлектронный катод (прямого или косвенного накала), анод и одну управляющую сетку.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[The electrovacuum triode has three electrodes: a thermoelectronic cathode (direct or indirect heat), an anode and one control grid.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

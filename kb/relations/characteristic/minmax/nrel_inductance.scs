@@ -1,0 +1,35 @@
+characteristic <- sc_node_not_relation;;
+electronic_component <- sc_node_not_relation;;
+
+arity <- sc_node_norole_relation;;
+number <- sc_node_norole_relation;;
+number->2;;
+arity->...  (*
+<-sc_node_not_relation;;
+<=nrel_mesaurement:2;;
+->nrel_inductance;;
+*);;
+
+nrel_inductance
+  <- sc_node_norole_relation;
+  <- maximum_permissible_characteristic;
+  => nrel_main_idtf:
+    [индуктивность] (* <- lang_ru;; *);
+    [inductance] (* <- lang_en;; *);
+
+  <- rrel_key_sc_element: ... (*
+    <- definition;;
+    => nrel_main_idtf:
+      [Опр. (термостойкость)] (* <- lang_ru;; *);
+      [Def. (heat_resistance)] (* <- lang_en;; *);;
+
+    <= nrel_using_constants: ... (*
+      -> characteristic;;
+      -> electronic_component;;
+    *);;
+
+    <= nrel_sc_text_translation: ... (*
+      -> [Предусмотренная тенденция детали к изменению повдения потока электронов] (* <- lang_ru;; => nrel_format: format_html;; *);;
+      -> [inductance is the tendency of an electrical conductor to oppose a change in the electric current flowing through it](* <- lang_en;; => nrel_format: format_html;; *);;
+    *);;
+  *);;

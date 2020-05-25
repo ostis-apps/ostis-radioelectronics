@@ -1,0 +1,36 @@
+characteristic <- sc_node_not_relation;;
+electronic_component <- sc_node_not_relation;;
+
+arity <- sc_node_norole_relation;;
+number <- sc_node_norole_relation;;
+number->2;;
+arity->...  (*
+<-sc_node_not_relation;;
+<=nrel_mesaurement:2;;
+->nrel_wire_diameter;;
+*);;
+
+nrel_wire_diameter
+  <- sc_node_norole_relation;
+  <- mechanical_characteristic;
+
+  => nrel_main_idtf:
+    [диаметр_провода] (* <- lang_ru;; *);
+    [wire_diameter] (* <- lang_en;; *);
+
+  <- rrel_key_sc_element: ... (*
+    <- definition;;
+    => nrel_main_idtf:
+      [Опр. (диаметр_провода)] (* <- lang_ru;; *);
+      [Def. (wire_diameter)] (* <- lang_en;; *);;
+
+    <= nrel_using_constants: ... (*
+      -> characteristic;;
+      -> electronic_component;;
+    *);;
+
+    <= nrel_sc_text_translation: ... (*
+      -> [Сечение соединительног провода] (* <- lang_ru;; => nrel_format: format_html;; *);;
+      -> [Cross section](* <- lang_en;; => nrel_format: format_html;; *);;
+    *);;
+  *);;

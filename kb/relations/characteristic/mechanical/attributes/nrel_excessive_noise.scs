@@ -1,0 +1,36 @@
+characteristic <- sc_node_not_relation;;
+electronic_component <- sc_node_not_relation;;
+
+arity <- sc_node_norole_relation;;
+number <- sc_node_norole_relation;;
+number->2;;
+arity->...  (*
+<-sc_node_not_relation;;
+<=nrel_mesaurement:2;;
+->nrel_excessive_noise;;
+*);;
+
+nrel_excessive_noise
+  <- sc_node_norole_relation;
+  <- mechanical_characteristic;
+
+  => nrel_main_idtf:
+    [избыточный_шум] (* <- lang_ru;; *);
+    [excessive_noise'] (* <- lang_en;; *);
+
+  <- rrel_key_sc_element: ... (*
+    <- definition;;
+    => nrel_main_idtf:
+      [Опр. (избыточный_шум)] (* <- lang_ru;; *);
+      [Def. (excessive_noise)] (* <- lang_en;; *);;
+
+    <= nrel_using_constants: ... (*
+      -> characteristic;;
+      -> electronic_component;;
+    *);;
+
+    <= nrel_sc_text_translation: ... (*
+      -> [Шум, производимый элементом] (* <- lang_ru;; => nrel_format: format_html;; *);;
+      -> [Nois produced by the element](* <- lang_en;; => nrel_format: format_html;; *);;
+    *);;
+  *);;
