@@ -11,5 +11,5 @@ radioelectronics_knowledge_base
 
 <= nrel_section_decomposition:section_radioelectronics;
 <= nrel_section_decomposition:section_electronics;
-<= nrel_section_decomposition:section_electronic_component;
+<= nrel_section_decomposition:section_electronic_components;
 <= nrel_section_decomposition:section_circuitry;;
