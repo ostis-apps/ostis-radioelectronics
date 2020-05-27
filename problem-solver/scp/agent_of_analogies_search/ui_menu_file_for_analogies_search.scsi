@@ -1,0 +1,17 @@
+ui_menu_file_for_analogies_search
+	<- 	ui_user_command_class_atom; 
+		ui_user_command_class_view_kb;
+	=> nrel_main_idtf: 
+		[Найти аналоги для этого элемента] (* <- lang_ru;; *);
+		[Find analogies for this element] (* <- lang_en;; *);
+	=> ui_nrel_command_template:
+		[*
+		question_searching_analogies _-> ._question_searching_analogies_instance
+			(*
+				_-> ui_arg_1;;
+			*);;
+		._question_searching_analogies_instance _<- question;;
+		*];
+	=> ui_nrel_command_lang_template: 
+		[Запрос поиска аналогов для: $ui_arg_1] (* <- lang_ru;; *);
+                [Request for analogies search for: $ui_arg_1] (* <- lang_en;; *);;

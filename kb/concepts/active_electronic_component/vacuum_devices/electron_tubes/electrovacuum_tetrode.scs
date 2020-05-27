@@ -1,0 +1,37 @@
+shielding_grid<-sc_node_not_relation;;
+electrovacuum_tetrode<-sc_node_not_relation;
+=>nrel_main_idtf:
+[электровакуумный тетрод] (*<-lang_ru;;*);
+[electrovacuum tetrode] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(электровакуумный тетрод)](*<-lang_ru;;*);
+[Опр.(electrovacuum tetrode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+vacuum_electronic_lamp;
+electrode
+};;
+<=nrel_sc_text_translation:...(*
+->[Электровакуумный тетрод — электронная лампа, имеющая четыре электрода.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[An electrovacuum tetrode is an electronic lamp having four electrodes.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(электровакуумный тетрод)](*<-lang_ru;;*);
+[Утв.(electrovacuum tetrode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+thermoelectronic_cathode;
+control_grid;
+shielding_grid;
+anode
+};;
+<=nrel_sc_text_translation:...(*
+->[Электровакуумный тетрод имеет термоэлектронный катод (прямого или косвенного накала), две сетки (управляющую и экранирующую) и анод.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[The electrovacuum tetrode has a thermoelectronic cathode (direct or indirect heat), two grids (control and shielding) and an anode.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

@@ -1,0 +1,41 @@
+automatic_device<-sc_node_not_relation;;
+external_physical_phenomenon<-sc_node_not_relation;;
+output_values<-sc_node_not_relation;;
+emergency_relay<-sc_node_not_relation;;
+control_relay<-sc_node_not_relation;;
+
+relay<-sc_node_not_relation;
+=>nrel_main_idtf:
+[реле] (*<-lang_ru;;*);
+[relay] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(реле)](*<-lang_ru;;*);
+[Опр.(relay)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+automatic_device;
+external_physical_phenomenon;
+output_values
+};;
+<=nrel_sc_text_translation:...(*
+->[Реле — элемент автоматических устройств, который при воздействии на него внешних физических явлений скачкообразно принимает конечное число значений выходной величины.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[The relay is an element of automatic devices which, when exposed to external physical phenomena, hops the final number of output values.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(реле)](*<-lang_ru;;*);
+[Утв.(relay)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+emergency_relay;
+control_relay
+};;
+<=nrel_sc_text_translation:...(*
+->[По назначению реле подраздеяются на аварийные реле и управляющие реле.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[According to the purpose the relays are attached to emergency relays and control relays.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

@@ -1,0 +1,39 @@
+electronic_display_device<-sc_node_not_relation;;
+visually_monitor<-sc_node_not_relation;;
+universal_electronic_indicator<-sc_node_not_relation;;
+specialized_electronic_indicator<-sc_node_not_relation;;
+
+electronic_indicator<-sc_node_not_relation;
+=>nrel_main_idtf:
+[электронный индикатор] (*<-lang_ru;;*);
+[electronic indicator] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(электронный индикатор)](*<-lang_ru;;*);
+[Опр.(electronic indicator)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+electronic_display_device;
+visually_monitor
+};;
+<=nrel_sc_text_translation:...(*
+->[Электронный индикатор — это электронное показывающее устройство, предназначенное для визуального контроля за событиями, процессами и сигналами.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[An electronic indicator is an electronic display device designed to visually monitor events, processes, and signals.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(электронный индикатор)](*<-lang_ru;;*);
+[Утв.(electronic indicator)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+universal_electronic_indicator;
+specialized_electronic_indicator
+};;
+<=nrel_sc_text_translation:...(*
+->[Индикаторы  бывают универсаальными и специализированными.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Indicators are universal and specialized.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

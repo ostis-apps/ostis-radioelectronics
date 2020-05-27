@@ -1,0 +1,36 @@
+crystal_semiconductor<-sc_node_not_relation;;
+control_electrode<-sc_node_not_relation;;
+
+thyristor<-sc_node_not_relation;
+=>nrel_main_idtf:
+[тиристор] (*<-lang_ru;;*);
+[thyristor] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(тиристор)](*<-lang_ru;;*);
+[Опр.(thyristor)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+semiconductor_device;
+crystal_semiconductor
+};;
+<=nrel_sc_text_translation:...(*
+->[Тиристор — полупроводниковый прибор, выполненный на основе монокристалла полупроводника с тремя или более p-n-переходами и имеющий два устойчивых состояния: «закрытое» состояние — состояние низкой проводимости и «открытое» состояние — состояние высокой проводимости.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Thyristor is a semiconductor device based on a single crystal semiconductor with three or more p-n transitions and has two stable states: "closed" state - low conductivity state and "open" state - high conductivity state.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(тиристор)](*<-lang_ru;;*);
+[Утв.(thyristor)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+control_electrode
+};;
+<=nrel_sc_text_translation:...(*
+->[Основное применение тиристоров — управление мощной нагрузкой с помощью слабого сигнала, подаваемого на управляющий электрод.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[The main application of thyristors is to control the powerful load with a weak signal supplied to the control electrode.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

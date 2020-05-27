@@ -1,0 +1,40 @@
+resistive_material<-sc_node_not_relation;;
+electric_current<-sc_node_not_relation;;
+rated_electric_current<-sc_node_not_relation;;
+sequential_connection_to_circuit<-sc_node_not_relation;;
+fuse<-sc_node_not_relation;
+=>nrel_main_idtf:
+[предохранитель] (*<-lang_ru;;*);
+[fuse] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(предохранитель)](*<-lang_ru;;*);
+[Опр.(fuse)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+electric_switching_device;
+electrical_circuit;
+electric_current
+};;
+<=nrel_sc_text_translation:...(*
+->[Предохранитель — коммутационный электрический аппарат, предназначенный для отключения защищаемой цепи размыканием или разрушением специально предусмотренных для этого токоведущих частей под действием тока, превышающего определённое значение.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Fuse is a switching electrical device designed to disconnect the protected circuit by opening or breaking specially provided current-carrying parts under the action of current exceeding a certain value.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(предохранитель)](*<-lang_ru;;*);
+[Утв.(fuse)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+electric_current;
+rated_electric_current;
+sequential_connection_to_circuit
+};;
+<=nrel_sc_text_translation:...(*
+->[Предохранитель включается последовательно с потребителем электрического тока и разрывает цепь тока при превышении им номинального тока, — тока, на который рассчитан предохранитель.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[The fuse is connected in series with the electric current consumer and breaks the current circuit when it exceeds the rated current, - the current to which the fuse is designed.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

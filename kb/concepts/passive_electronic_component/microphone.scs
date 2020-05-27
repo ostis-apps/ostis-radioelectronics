@@ -1,0 +1,38 @@
+electroacoustic_instrument<-sc_node_not_relation;;
+screen<-sc_node_not_relation;;
+pad<-sc_node_not_relation;;
+cap<-sc_node_not_relation;;
+microphone<-sc_node_not_relation;
+=>nrel_main_idtf:
+[микрофон] (*<-lang_ru;;*);
+[microphone] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(микрофон)](*<-lang_ru;;*);
+[Опр.(microphone)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+electroacoustic_instrument
+};;
+<=nrel_sc_text_translation:...(*
+->[Микрофон — электроакустический прибор, преобразующий акустические колебания в электрический сигнал.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[A microphone is an electroacoustic instrument that converts acoustic vibrations into an electrical signal.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(микрофон)](*<-lang_ru;;*);
+[Утв.(microphone)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+screen;
+pad;
+cap
+};;
+<=nrel_sc_text_translation:...(*
+->[Резистор состоит из резистивного материала.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[For microphones there are various types of protection in the form of screens, pads, caps.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

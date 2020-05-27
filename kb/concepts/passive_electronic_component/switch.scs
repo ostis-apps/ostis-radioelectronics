@@ -1,0 +1,38 @@
+electric_switching_device<-sc_node_not_relation;;
+group_of_electrical_circuits<-sc_node_not_relation;;
+key<-sc_node_not_relation;;
+
+switch<-sc_node_not_relation;
+=>nrel_main_idtf:
+[переключатель] (*<-lang_ru;;*);
+[switch] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(переключатель)](*<-lang_ru;;*);
+[Опр.(switch)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+device;
+electric_switching_device;
+electrical_circuit
+};;
+<=nrel_sc_text_translation:...(*
+->[Переключатель — электрический коммутационный аппарат или устройство, применяется для замыкания и/или размыкания электрической цепи или группы электрических цепей.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Switch is an electrical switching device or device used to close and/or open an electrical circuit or a group of electrical circuits.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(переключатель)](*<-lang_ru;;*);
+[Утв.(switch)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+key
+};;
+<=nrel_sc_text_translation:...(*
+->[Ключ - другое названаие переключателя.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[The key is another name of the switch.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

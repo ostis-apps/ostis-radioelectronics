@@ -1,0 +1,43 @@
+resistive_material<-sc_node_not_relation;;
+electrical_signal<-sc_node_not_relation;;
+electromagnetic_signal<-sc_node_not_relation;;
+period<-sc_node_not_relation;;
+optical_signal<-sc_node_not_relation;;
+device<-sc_node_not_relation;;
+
+lag_line<-sc_node_not_relation;
+=>nrel_main_idtf:
+[линия задержки] (*<-lang_ru;;*);
+[lag line] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(линия задержки)](*<-lang_ru;;*);
+[Опр.(lag line)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+device;
+electrical_signal;
+electromagnetic_signal;
+period
+};;
+<=nrel_sc_text_translation:...(*
+->[Линия задержки — устройство, предназначенное для задержки электрических и электромагнитных сигналов на заданный промежуток времени.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Delay line is a device designed to delay electrical and electromagnetic signals for a given period of time.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(линия задержки)](*<-lang_ru;;*);
+[Утв.(lag line)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+electrical_signal;
+optical_signal
+};;
+<=nrel_sc_text_translation:...(*
+->[Существуют линии задержки для задержки электрических сигналов и для задержки оптических сигналов.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[There are delay lines for delay of electrical signals and for delay of optical signals.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

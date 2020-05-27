@@ -1,0 +1,36 @@
+characteristic <- sc_node_not_relation;;
+electronic_component <- sc_node_not_relation;;
+
+arity <- sc_node_norole_relation;;
+number <- sc_node_norole_relation;;
+number->2;;
+arity->...  (*
+<-sc_node_not_relation;;
+<=nrel_mesaurement:2;;
+->nrel_specific_capacity;;
+*);;
+
+nrel_specific_capacity
+  <- sc_node_norole_relation;
+  <- mechanical_characteristic;
+
+  => nrel_main_idtf:
+    [удельная_ёмкость] (* <- lang_ru;; *);
+    [specific_capacity] (* <- lang_en;; *);
+
+  <- rrel_key_sc_element: ... (*
+    <- definition;;
+    => nrel_main_idtf:
+      [Опр. (удельная_ёмкость)] (* <- lang_ru;; *);
+      [Def. (specific_capacity)] (* <- lang_en;; *);;
+
+    <= nrel_using_constants: ... (*
+      -> characteristic;;
+      -> electronic_component;;
+    *);;
+
+    <= nrel_sc_text_translation: ... (*
+      -> [Отношение емкости к объему диэлектрика] (* <- lang_ru;; => nrel_format: format_html;; *);;
+      -> [The ratio of capacitance to dielectric volume](* <- lang_en;; => nrel_format: format_html;; *);;
+    *);;
+  *);;

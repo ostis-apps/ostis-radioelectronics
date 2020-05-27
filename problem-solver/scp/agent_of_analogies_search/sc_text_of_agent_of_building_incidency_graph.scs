@@ -1,0 +1,13 @@
+sc_text_of_agent_of_analogies_search
+-> rrel_key_sc_element:
+	agent_of_analogies_search;
+
+<- scp_program_sc_text;
+
+=> nrel_main_idtf: 
+	[sc-текст агентной scp-программы поиска аналогов] 
+	(* <- lang_ru;; *);
+	[sc-text scp-agent based program analogies search] 
+	(* <- lang_en;; *);;
+
+sc_text_of_agent_of_analogies_search = [*^"file://agent_of_analogies_search.scsi"*];;

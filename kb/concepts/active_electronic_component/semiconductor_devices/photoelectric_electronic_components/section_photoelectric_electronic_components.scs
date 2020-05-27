@@ -1,0 +1,14 @@
+section_photoelectric_electronic_components<-non_atomic_section;
+=>nrel_main_idtf:
+[Раздел. Фотоэлектрические электронные компоненты] (*<-lang_ru;;*);
+[Section. Photoelectric electronic components] (*<-lang_en;;*);;
+
+section_photoelectric_electronic_components-> rrel_key_sc_element:
+optron;
+photodiode;
+photoresistor;
+phototransistor;
+solar_battery;;
+
+section_photoelectric_electronic_components<-not_enough_formed_structure;;
+

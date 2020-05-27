@@ -1,0 +1,171 @@
+scp_program -> proc_of_element_validation
+	(*
+		-> rrel_params: ...
+			(*
+    			-> rrel_1: rrel_in: _element;;
+	   			-> rrel_2: rrel_out: _answer_node;;
+  			*);;
+	-> rrel_operators: ... (*
+
+        -> rrel_init: ..proc_init_element_storage (*
+			<- genEl;;
+			-> rrel_1: rrel_assign: rrel_const: rrel_node: rrel_scp_var: _answer_node;;
+
+			=> nrel_goto: ..proc_find_main_characteristic_set;;
+		*);;
+		
+		-> ..proc_find_main_characteristic_set (*
+			<- searchElStr5;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _element;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc0;;
+			-> rrel_3: rrel_assign: rrel_node: rrel_scp_var: _element_main_characteristic_set;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc1;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_main_characteristic;;	
+
+            => nrel_then: ..proc_find_additional_characteristic_set;;
+			=> nrel_else: ..proc_add_to_answer_node_invalid;;				
+		*);;
+	
+		
+		-> ..proc_find_additional_characteristic_set (*
+			<- searchElStr5;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _element;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc0;;
+			-> rrel_3: rrel_assign: rrel_node: rrel_scp_var: _element_additional_characteristic_set;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc1;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_additional_characteristic;;	
+
+            => nrel_then: ..proc_find_core_element;;
+			=> nrel_else: ..proc_add_to_answer_node_invalid;;				
+		*);;
+		
+		-> ..proc_find_core_element (*
+			<- searchElStr5;;
+			
+			-> rrel_1: rrel_assign: rrel_scp_var: _core_node;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _core_arc;;
+			-> rrel_3: rrel_fixed: rrel_node: rrel_scp_var: _element;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc2;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_radioelectronics_core_element_pointer;;	
+
+            => nrel_then: ..proc_core_find_main_characteristic_set;;
+			=> nrel_else: ..proc_add_to_answer_node_invalid;;				
+		*);;
+		
+		-> ..proc_core_find_main_characteristic_set (*
+			<- searchElStr5;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _core_node;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc3;;
+			-> rrel_3: rrel_assign: rrel_node: rrel_scp_var: _const_main_characteristic_set;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc4;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_main_characteristic;;	
+
+            => nrel_then: ..proc_core_find_additional_characteristic_set;;
+			=> nrel_else: ..proc_add_to_answer_node_invalid;;				
+		*);;
+	
+		
+		-> ..proc_core_find_additional_characteristic_set (*
+			<- searchElStr5;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _core_node;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc5;;
+			-> rrel_3: rrel_assign: rrel_node: rrel_scp_var: _const_additional_characteristic_set;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc9;;
+			-> rrel_5: rrel_fixed: rrel_scp_const: rrel_additional_characteristic;;	
+
+            => nrel_then: ..proc_check_main_element_characteristics;;
+			=> nrel_else: ..proc_add_to_answer_node_invalid;;				
+		*);;
+		
+		
+		//Main check
+		-> ..proc_check_main_element_characteristics (*
+			<- searchElStr5;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _element_main_characteristic_set;;
+			-> rrel_2: rrel_assign: rrel_scp_var:  _arc6;;
+			-> rrel_3: rrel_assign: rrel_node: rrel_scp_var: _characteristic_value;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc7;;
+			-> rrel_5: rrel_assign: rrel_node: rrel_scp_var: _current_main_characteristic;;	
+			
+			=> nrel_then: ..proc_erase_visited_element_1;;
+			=> nrel_else: ..proc_check_additional_element_characteristics;;					
+		*);;
+
+		-> ..proc_erase_visited_element_1 (*
+			<- eraseEl;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc6;;
+			
+			=> nrel_goto: ..proc_check_main_element_characteristics_valid_status;;		
+		*);;
+		
+		-> ..proc_check_main_element_characteristics_valid_status (*
+			<-searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _const_main_characteristic_set;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc11;;
+			-> rrel_3: rrel_fixed: rrel_vertex: rrel_scp_var: _current_main_characteristic;;
+			
+			=> nrel_then: ..proc_check_main_element_characteristics;;
+			=> nrel_else: ..proc_add_to_answer_node_invalid;;					
+		*);;
+		
+		//Additional check
+		-> ..proc_check_additional_element_characteristics (*
+			<- searchElStr5;;
+			
+			-> rrel_1: rrel_fixed: rrel_scp_var: _element_additional_characteristic_set;;
+			-> rrel_2: rrel_assign: rrel_scp_var:  _arc10;;
+			-> rrel_3: rrel_assign: rrel_node: rrel_scp_var: _characteristic_value;;
+			-> rrel_4: rrel_assign: rrel_pos_const_perm: rrel_scp_var:  _arc7;;
+			-> rrel_5: rrel_assign: rrel_node: rrel_scp_var: _current_additional_characteristic;;	
+			
+			
+			=> nrel_then: ..proc_erase_visited_element_2;;
+			=> nrel_else: ..proc_add_to_answer_node_valid;;					
+		*);;
+
+		-> ..proc_erase_visited_element_2 (*
+			<- eraseEl;;
+			-> rrel_1: rrel_fixed: rrel_erase: rrel_scp_var: _arc10;;
+			
+			=> nrel_goto: ..proc_check_additional_element_characteristics_valid_status;;		
+		*);;
+		
+		-> ..proc_check_additional_element_characteristics_valid_status (*
+			<-searchElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _const_additional_characteristic_set;;
+			-> rrel_2: rrel_assign: rrel_pos_const_perm: rrel_scp_var: _arc11;;
+			-> rrel_3: rrel_fixed: rrel_vertex: rrel_scp_var: _current_additional_characteristic;;
+			
+			=> nrel_then: ..proc_check_additional_element_characteristics;;
+			=> nrel_else: ..proc_add_to_answer_node_invalid;;					
+		*);;
+		
+		-> ..proc_add_to_answer_node_valid (*
+			<- genElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_node;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc9;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: kb_radioelectronics_valid_element;;
+
+			=> nrel_goto: ..proc_find_analogies_return;;
+		*);;
+		
+		-> ..proc_add_to_answer_node_invalid (*
+			<- genElStr3;;
+			-> rrel_1: rrel_fixed: rrel_scp_var: _answer_node;;
+			-> rrel_2: rrel_assign: rrel_const: rrel_pos_const_perm: rrel_scp_var: _arc9;;
+			-> rrel_3: rrel_fixed: rrel_scp_const: kb_radioelectronics_invalid_element;;
+
+			=> nrel_goto: ..proc_find_analogies_return;;
+		*);;
+
+
+		-> ..proc_find_analogies_return (*
+			<- return;;
+		*);;	
+	*);;
+*);;

@@ -1,0 +1,35 @@
+resistive_material<-sc_node_not_relation;;
+electrical_conductivity<-sc_node_not_relation;;
+
+diode<-sc_node_not_relation;
+=>nrel_main_idtf:
+[диод] (*<-lang_ru;;*);
+[diode] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(диод)](*<-lang_ru;;*);
+[Опр.(diode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+electronic_component
+};;
+<=nrel_sc_text_translation:...(*
+->[Диод — электронный элемент, обладающий нелинейной вольт-амперной характеристикой.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Diode is an electronic element having a non-linear volt-ampere characteristic.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(диод)](*<-lang_ru;;*);
+[Утв.(diode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+electrical_conductivity
+};;
+<=nrel_sc_text_translation:...(*
+->[У большинства диодов различна электрическая проводимость в зависимости от полярности приложенного к диоду напряжения.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Most diodes have different electrical conductivity depending on the polarity of the voltage applied to the diode.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

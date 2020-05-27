@@ -1,0 +1,38 @@
+resistive_material<-sc_node_not_relation;;
+
+electrovacuum_octode<-sc_node_not_relation;
+=>nrel_main_idtf:
+[электровакуумный октод] (*<-lang_ru;;*);
+[electrovacuum octode] (*<-lang_en;;*);
+
+<-rrel_key_sc_element:...(*
+<-definition;;
+=>nrel_main_idtf:
+[Опр.(электровакуумный октод)](*<-lang_ru;;*);
+[Опр.(electrovacuum octode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+vacuum_electronic_lamp;
+electrode
+};;
+<=nrel_sc_text_translation:...(*
+->[Электровакуумный октод — электронная лампа с восемью электродами.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Electrovacuum octode is an electronic lamp with eight electrodes.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);
+
+<-rrel_key_sc_element:...(*
+<-explanation;;
+=>nrel_main_idtf:
+[Утв.(электровакуумный октод)](*<-lang_ru;;*);
+[Утв.(electrovacuum octode)](*<-lang_en;;*);;
+=>nrel_using_constants:{
+thermoelectronic_cathode;
+control_grid;
+shielding_grid;
+anode
+};;
+<=nrel_sc_text_translation:...(*
+->[Электровакуумный октод состоит из катода, анода и шести сеток.](* <- lang_ru;; => nrel_format: format_html;; *);;
+->[Electrovacuum octode consists of cathode, anode and six grids.](* <- lang_en;; => nrel_format: format_html;; *);;
+*);;
+*);;

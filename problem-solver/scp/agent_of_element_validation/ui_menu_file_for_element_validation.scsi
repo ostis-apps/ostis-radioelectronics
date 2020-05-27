@@ -1,0 +1,17 @@
+ui_menu_file_for_element_validation
+	<- 	ui_user_command_class_atom; 
+		ui_user_command_class_view_kb;
+	=> nrel_main_idtf: 
+		[Проверить валидность этого элемента] (* <- lang_ru;; *);
+		[Validate this element] (* <- lang_en;; *);
+	=> ui_nrel_command_template:
+		[*
+		question_element_validation _-> ._question_element_validation_instance
+			(*
+				_-> ui_arg_1;;
+			*);;
+		._question_element_validation_instance _<- question;;
+		*];
+	=> ui_nrel_command_lang_template: 
+		[Запрос валидации для: $ui_arg_1] (* <- lang_ru;; *);
+                [Request for validationfor: $ui_arg_1] (* <- lang_en;; *);;

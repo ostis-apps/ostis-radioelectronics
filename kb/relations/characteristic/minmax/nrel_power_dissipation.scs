@@ -1,0 +1,35 @@
+characteristic <- sc_node_not_relation;;
+electronic_component <- sc_node_not_relation;;
+
+arity <- sc_node_norole_relation;;
+number <- sc_node_norole_relation;;
+number->2;;
+arity->...  (*
+<-sc_node_not_relation;;
+<=nrel_mesaurement:2;;
+->nrel_power_dissipation;;
+*);;
+
+nrel_power_dissipation
+  <- sc_node_norole_relation;
+  <- maximum_permissible_characteristic;
+  => nrel_main_idtf:
+    [рассеиваемая_мощность] (* <- lang_ru;; *);
+    [power_dissipation] (* <- lang_en;; *);
+
+  <- rrel_key_sc_element: ... (*
+    <- definition;;
+    => nrel_main_idtf:
+      [Опр. (рассеиваемая_мощность)] (* <- lang_ru;; *);
+      [Def. (power_dissipation)] (* <- lang_en;; *);;
+
+    <= nrel_using_constants: ... (*
+      -> characteristic;;
+      -> electronic_component;;
+    *);;
+
+    <= nrel_sc_text_translation: ... (*
+      -> [Количество тепла, которое может отвести элемент, без получения повреждений] (* <- lang_ru;; => nrel_format: format_html;; *);;
+      -> [The amount of heat that an element can remove without damage](* <- lang_en;; => nrel_format: format_html;; *);;
+    *);;
+  *);;

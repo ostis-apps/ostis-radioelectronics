@@ -1,0 +1,10 @@
+section_integrated_circuits<-non_atomic_section;
+=>nrel_main_idtf:
+[Раздел. Интегральные схемы] (*<-lang_ru;;*);
+[Section. Integrated circuits] (*<-lang_en;;*);;
+
+section_integrated_circuits-> rrel_key_sc_element:integrated_circuit;;
+
+
+section_integrated_circuits<-not_enough_formed_structure;;
+
