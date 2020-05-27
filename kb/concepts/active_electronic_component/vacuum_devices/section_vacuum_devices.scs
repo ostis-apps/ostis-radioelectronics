@@ -6,6 +6,16 @@ section_vacuum_devices<-non_atomic_section;
 section_vacuum_devices<= nrel_section_decomposition:{
 section_electron_tubes
 };;
+section_vacuum_devices-> rrel_key_sc_element:
+combined_vacuum_lamp;
+electrovacuum_diode;
+electrovacuum_triode;
+electrovacuum_tetrode;
+electrovacuum_pentode;
+electrovacuum_hexode;
+electrovacuum_heptode;
+electrovacuum_octode;
+electrovacuum_nonode;;
 
 section_vacuum_devices<-not_enough_formed_structure;;
 
