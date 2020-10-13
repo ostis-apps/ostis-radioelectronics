@@ -8,5 +8,29 @@ section_vacuum_devices;
 section_semiconductor_devices
 };;
 
+section_active_electronic_components-> rrel_key_sc_element:
+combined_vacuum_lamp;
+electrovacuum_diode;
+electrovacuum_triode;
+electrovacuum_tetrode;
+electrovacuum_pentode;
+electrovacuum_hexode;
+electrovacuum_heptode;
+electrovacuum_octode;
+electrovacuum_nonode;
+diode;
+simistor;
+thyristor;
+bipolar_transistor;
+field_transistor;
+integrated_circuit;
+zener_diode;
+optron;
+photodiode;
+photoresistor;
+phototransistor;
+solar_battery;
+integrated_circuit;;
+
 section_active_electronic_components<-not_enough_formed_structure;;
 

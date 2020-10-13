@@ -15,7 +15,7 @@ electrodynamic_loudspeaker;
 microphone;
 video_camera;
 antenna;
-inductor;
+fuse;
 quartz_resonator;
 transformer;
 relay;

@@ -10,6 +10,43 @@ section_active_electronic_components
 
 section_electronic_components-> rrel_key_sc_element:
 electronic_component;
-subject_domain_of_electronic_components;;
+subject_domain_of_electronic_components;
+lag_line;
+switch;
+electronic_indicator;
+electrodynamic_loudspeaker;
+microphone;
+video_camera;
+antenna;
+fuse;
+quartz_resonator;
+transformer;
+relay;
+solenoid;
+capacitor;
+inductor;
+resistor;
+diode;
+simistor;
+thyristor;
+bipolar_transistor;
+field_transistor;
+integrated_circuit;
+zener_diode;
+optron;
+photodiode;
+photoresistor;
+phototransistor;
+solar_battery;
+combined_vacuum_lamp;
+electrovacuum_diode;
+electrovacuum_triode;
+electrovacuum_tetrode;
+electrovacuum_pentode;
+electrovacuum_hexode;
+electrovacuum_heptode;
+electrovacuum_octode;
+electrovacuum_nonode;
+accumulator;;
 
 section_electronic_components<-not_enough_formed_structure;;

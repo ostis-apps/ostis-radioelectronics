@@ -11,6 +11,7 @@ section_piezoelectric_electronic_components
 };;
 
 section_passive_electronic_components-> rrel_key_sc_element:
+fuse;
 lag_line;
 switch;
 electronic_indicator;
@@ -18,7 +19,13 @@ electrodynamic_loudspeaker;
 microphone;
 video_camera;
 antenna;
+accumulator;
+capacitor;
 inductor;
-accumulator;;
+resistor;
+relay;
+solenoid;
+transformer;
+quartz_resonator;;
 
 section_passive_electronic_components<-not_enough_formed_structure;;

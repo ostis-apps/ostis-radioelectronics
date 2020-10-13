@@ -15,7 +15,13 @@ thyristor;
 bipolar_transistor;
 field_transistor;
 integrated_circuit;
-zener_diode;;
+zener_diode;
+optron;
+photodiode;
+photoresistor;
+phototransistor;
+solar_battery;
+integrated_circuit;;
 
 section_semiconductor_devices<-not_enough_formed_structure;;
 
