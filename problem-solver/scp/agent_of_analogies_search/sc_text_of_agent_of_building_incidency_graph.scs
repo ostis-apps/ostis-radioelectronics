@@ -9,5 +9,3 @@ sc_text_of_agent_of_analogies_search
 	(* <- lang_ru;; *);
 	[sc-text scp-agent based program analogies search] 
 	(* <- lang_en;; *);;
-
-sc_text_of_agent_of_analogies_search = [*^"file://agent_of_analogies_search.scsi"*];;

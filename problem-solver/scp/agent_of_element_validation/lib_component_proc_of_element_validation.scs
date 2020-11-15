@@ -11,5 +11,3 @@ lib_component_proc_of_element_validation
 -> rrel_key_sc_element: 
 	proc_of_element_validation
 ;;
-
-lib_component_proc_of_building_incidency_graph = [*^"file://proc_of_element_validation.scs"*];;
